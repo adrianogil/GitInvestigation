@@ -33,11 +33,13 @@ function verify_investigation()
                 cur_line_1=$(echo $cur_line | cut -d \, -f 1)
                 cur_line_2=$(echo $cur_line | cut -d \, -f 2)
                 result_day_text=$(get_text $cur_line_1 $cur_line_2)
-                # echo $result_day_text
+                result_day_text=$(echo $result_day_text | xargs)
+                echo $result_day_text
  
                 current_day_value=$($git_files_cmd HEAD~$d)
-                current_day_value=$(echo $current_day_value | awk '{$1=$1;print}')
-                # echo $current_day_value
+                current_day_value=$(echo $current_day_value | xargs)
+                # current_day_value=$(echo $current_day_value | sed 's/^[ \t]*//;s/[ \t]*$//')
+                echo $current_day_value
 
                 if [ "$current_day_value" == "$result_day_text" ]; then
                     echo 'Correct result for day '$d
