@@ -1,11 +1,38 @@
 # !/bin/sh
 
-text_data_file='data_investigation'
+investigation_dir=$(dirname $0)
+
+text_data_file=${investigation_dir}"/data_investigation"
 
 function get_text()
 {
     sed -n ${1},${2}p ${text_data_file}
 }
+
+# Verify if is inside a git repo
+function verify_git_repo() 
+{
+    inside_git_repo="$(git rev-parse --is-inside-work-tree 2>/dev/null)"
+
+    if [ "$inside_git_repo" ]; then
+      has_commits="$(git log 2>/dev/null)"
+      if [ "$has_commits" ]; then
+        echo $(get_text 22 22)
+      else
+        echo $(get_text 21 21)
+        exit 0
+      fi
+
+    else
+      echo $(get_text 13 13)
+      exit 0
+    fi
+}
+
+# Git investigation label
+printf "\n\n$(get_text 14 19)\n\n"
+
+verify_git_repo
 
 days=$(git log --pretty=oneline | wc -l)
 max_days=5
@@ -38,7 +65,6 @@ function verify_investigation()
  
                 current_day_value=$($git_files_cmd HEAD~$d)
                 current_day_value=$(echo $current_day_value | xargs)
-                # current_day_value=$(echo $current_day_value | sed 's/^[ \t]*//;s/[ \t]*$//')
                 echo $current_day_value
 
                 if [ "$current_day_value" == "$result_day_text" ]; then
