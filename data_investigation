@@ -10,25 +10,28 @@ A   t2.txt
 A   t1.txt
 15,15
 A   test.txt
-You should create a git repo to start an investigation. Every decent detective should know that. Anyway, try to type 'git init'  
-  ____ _ _   ___                     _   _             _   _             
- / ___(_) |_|_ _|_ ____   _____  ___| |_(_) __ _  __ _| |_(_) ___  _ __  
-| |  _| | __|| || '_ \ \ / / _ \/ __| __| |/ _` |/ _` | __| |/ _ \| '_ \ 
+You should create a git repo to start an investigation. Every decent detective should know that. Anyway, try to type 'git init'
+  ____ _ _   ___                     _   _             _   _
+ / ___(_) |_|_ _|_ ____   _____  ___| |_(_) __ _  __ _| |_(_) ___  _ __
+| |  _| | __|| || '_ \ \ / / _ \/ __| __| |/ _` |/ _` | __| |/ _ \| '_ \
 | |_| | | |_ | || | | \ V /  __/\__ \ |_| | (_| | (_| | |_| | (_) | | | |
  \____|_|\__|___|_| |_|\_/ \___||___/\__|_|\__, |\__,_|\__|_|\___/|_| |_|
-                                           |___/                         
+                                           |___/
 
 Let's start an investigation
 What do you need?
 3
-25,26,27
+26,27,28
 29,30,31
 mad_scientist.txt
 strange_dog.txt
 mayor.txt
-32,32
-32,32
-32,32
-mad_scientist.txt
-strange_dog.txt
-mayor.txt
+32,33
+34,35
+36,37
+Mad Scientist:\n\n
+Local mad scientist. He’s pretty famous for his interest in the infamous genetics engineering branch of strange animal creation
+Strange Dog:\n\n
+Mad scientist’s pet. It seems harmless.
+Mayor:\n\n
+He was alone with his wife when she was murdered. He claims a strange animal abruptly broke into his house and killed his wife.
