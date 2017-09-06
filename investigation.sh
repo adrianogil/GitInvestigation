@@ -9,6 +9,19 @@ function get_text()
     sed -n ${1},${2}p ${text_data_file}
 }
 
+function create_investigation_files()
+{
+    number_files=$(get_text 23 23)
+    file_name_lines=$(get_text 24 24)
+
+    for i in `seq 1 ${number_files}`;
+        do
+            cur_line=$(echo $file_name_lines | cut -d \, -f ${i})
+            # echo $cur_line
+            file_name=$(get_text $cur_line $cur_line)
+        done
+}
+
 # Verify if is inside a git repo
 function verify_git_repo() 
 {
