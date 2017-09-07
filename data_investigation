@@ -35,3 +35,11 @@ Strange Dog:\n\n
 Mad scientist’s pet. It seems harmless.
 Mayor:\n\n
 He was alone with his wife when she was murdered. He claims a strange animal abruptly broke into his house and killed his wife.
+In a dark night, the death of a villager astonish everyone. The investigation seems to narrow down to few suspects. For each suspect, a file was written:\n
+- mad_scientist.txt\n
+- strange_dog.txt\n
+- mayor.txt\n
+\n
+Why don’t you take a look in these files?
+
+

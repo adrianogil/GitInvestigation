@@ -41,6 +41,8 @@ function verify_git_repo()
       else
         # Day 0
         echo $(get_text 21 21)
+        echo
+        echo -e $(get_text 38 43)
         create_investigation_files
         exit 0
       fi
